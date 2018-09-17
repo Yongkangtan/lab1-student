@@ -193,3 +193,22 @@ work that you need to do can be found inside `scheduling.cpp`.
   copied priority queues. Could you avoid using copies? Yes, and it
   would make the simulator faster - however, we recommend that you go
   for simplicity before choosing to optimize.
+
+# C++ Resources
+
+This assignment touches on a variety of C++ language concepts and
+libraries that are useful to understand before you get started. The
+following links should help you in your work on this assignment. You
+should take the time to review these resources before and during the
+assignment to help you complete your work:
+
+* [Basic I/O](http://www.cplusplus.com/doc/tutorial/basic_io/)
+* [Namespaces](http://www.cplusplus.com/doc/oldtutorial/namespaces/)
+* [Classes](http://www.cplusplus.com/doc/tutorial/classes/)
+* [Priority Queue](http://gigi.nullneuron.net/comp/cpp-stl-priority-queue.php)
+* [List](https://thispointer.com/stdlist-tutorial-and-usage-details/)
+
+Again, spend some time studying up on these C++ basics. The best way
+to do this is to write out the examples and compile them to see how
+they work. Spending a little time to prepare will go a long way in
+successfully implementing this assignment.
