@@ -194,6 +194,52 @@ work that you need to do can be found inside `scheduling.cpp`.
   would make the simulator faster - however, we recommend that you go
   for simplicity before choosing to optimize.
 
+# Debugging Help
+
+It is important that you use the `gdb` debugger to debug your code
+when you encounter problems. You can easily start the `gdb` debugger
+from the command line:
+
+```bash
+$ gdb PROGRAM
+```
+
+Where `PROGRAM` is the program you compiled. You should look at the
+provided `gdb` cheatsheet to see some of the commands you can
+execute. If you need additional help you can take a look at [this
+tutorial](https://www.cs.cmu.edu/~gilpin/tutorial/).
+
+You will inevitably encounter cases when your code fails a test or
+worse, the test program exits with a segmentation violation
+(segfault). To debug the code in a test requires you to understand how
+the google test framework generates C++ code and how the C++ compiler
+generates method signatures. In short, this is what you want to do:
+
+```bash
+$ gdb TEST_PROGRAM
+(gdb) b TestSuite_TestName_Test::TestBody()
+```
+
+The `SuiteName` and `TestName` correspond to how you write a test
+using the google test framework. In particular, this is the basic
+structure of a test:
+
+```C++
+TEST(SuiteName, TestName) {
+  // the test body
+}
+```
+
+You should also know that the `b` (break) command provides tab
+completion. So, you can type in the following:
+
+```bash
+(gdb) b TestSuite[TAB][TAB]
+```
+
+The `[TAB]` is hitting the `tab` key on your keyboard. You can hit it
+twice in rapid succession to see all the possible completions.
+
 # C++ Resources
 
 This assignment touches on a variety of C++ language concepts and
